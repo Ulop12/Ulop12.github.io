@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HK PestTech</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
@@ -66,27 +67,134 @@
       color: #66b2ff;
     }
 
-    /* Burger Button – nur auf Handy sichtbar */
     .burger {
       display: none;
-      font-size: 24px;
-      color: #fff;
       background: none;
       border: none;
+      font-size: 24px;
+      color: #fff;
       cursor: pointer;
     }
 
+    #start, #service, #kontakt {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #start {
+      background: linear-gradient(145deg, #1a1a1a, #252525);
+      color: #fff;
+      position: relative;
+    }
+
+    .start-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .start-logo {
+      width: 380px;
+      margin-bottom: 30px;
+      max-width: 90%;
+    }
+
+    .start-text h2 {
+      font-size: 48px;
+      font-weight: 600;
+      margin: 0;
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .start-text p {
+      font-size: 22px;
+      margin-top: 20px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .scroll-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      color: #66b2ff;
+      margin-top: 40px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .service-box, .kontakt-box {
+      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    hr {
+      width: 250px;
+      height: 10px;
+      background: #66b2ff;
+      border: none;
+      margin: 20px auto;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      background: #66b2ff;
+      color: #000;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .glow-text {
+      color: #66b2ff;
+      text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
+    }
+
+    .glow-box {
+      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+    }
+
+    /* --- Responsive + animiertes Burger-Menü --- */
     @media (max-width: 768px) {
       .nav-links {
-        display: none;
+        overflow: hidden;
+        max-height: 0;
         flex-direction: column;
         width: 100%;
         background: #111;
-        padding: 10px 0;
+        padding: 0;
+        transition: max-height 0.4s ease, padding 0.3s ease;
       }
 
       .nav-links.active {
-        display: flex;
+        max-height: 300px;
+        padding: 10px 0;
       }
 
       .burger {
@@ -97,6 +205,11 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 15px 20px;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
+        margin: 0;
       }
 
       .start-text h2 {
@@ -120,107 +233,14 @@
         padding: 40px 15px;
       }
     }
-
-    /* Der Rest (gleicher Code wie vorher) – Startbereich usw. */
-    #start, #service, #kontakt {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
-    #start {
-      background: linear-gradient(145deg, #1a1a1a, #252525);
-      color: #fff;
-      position: relative;
-    }
-    .start-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .start-logo {
-      width: 380px;
-      margin-bottom: 30px;
-      max-width: 90%;
-    }
-    .start-text h2 {
-      font-size: 48px;
-      font-weight: 600;
-      margin: 0;
-      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    .start-text p {
-      font-size: 22px;
-      margin-top: 20px;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-    }
-    .scroll-btn {
-      font-size: 28px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      animation: bounce 2s infinite;
-      color: #66b2ff;
-      margin-top: 40px;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
-    }
-    .service-box, .kontakt-box {
-      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    hr {
-      width: 250px;
-      height: 10px;
-      background: #66b2ff;
-      border: none;
-      margin: 20px auto;
-    }
-    .social-icons {
-      position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .social-icons a {
-      width: 30px;
-      height: 30px;
-      background: #66b2ff;
-      color: #000;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-    .glow-text {
-      color: #66b2ff;
-      text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
-    }
-    .glow-box {
-      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
-    }
   </style>
 </head>
 <body>
-
   <div class="top-bar">HIER KOMMT DIE ADRESSE HIN NUTTÖÖÖÖ | TELEFONNR:</div>
 
   <div class="navbar">
     <div class="logo">H K PestTech</div>
-    <button class="burger" id="burger">&#9776;</button>
+    <button class="burger" id="burger" aria-label="Menü öffnen">&#9776;</button>
     <div class="nav-links" id="navLinks">
       <a href="#start">START</a>
       <a href="#service">UNSER SERVICE</a>
@@ -291,9 +311,18 @@
   </footer>
 
   <script>
-    // JS: Menü ein/ausklappen
-    document.getElementById('burger').addEventListener('click', function () {
-      document.getElementById('navLinks').classList.toggle('active');
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
     });
   </script>
 </body>
