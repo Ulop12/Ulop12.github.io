@@ -334,6 +334,10 @@
   <a href="https://ulop12.github.io/datenschutz.html" style="color:#66b2ff; text-decoration:none;">Datenschutz</a>
 
 </footer>
+
+
+
+
   <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
@@ -347,7 +351,37 @@
       });
     });
   </script>
+<script>
+  document.getElementById('kontaktformular').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      adresse: form.adresse.value,
+      ort: form.ort.value,
+      message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbx9Jx1h8g2-NgsBI5tk6UkmyCswdalo587KnX-kh39unqHBqIx3_4iAnpJ4ohf6my4N/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      alert("Nachricht erfolgreich gesendet!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Fehler beim Senden. Bitte später erneut versuchen.");
+      console.error(error);
+    });
+  });
+</script>
 
   
-</body>
+
+  </body>
 </html>
