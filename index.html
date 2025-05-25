@@ -250,20 +250,27 @@
       <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: Urlaub</p>
     </div>
 
-<form name="submit-to-google-sheet" id="kontaktformular"
-  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+<form action="https://script.google.com/macros/s/AKfycbwy1OsV3vLuNCZjeXsY-2yM4CuHY345DKlo8Dr3u5zWzgIQ7GNNfh9KMkGV62bnyqEF/exec"
+      method="POST"
+      id="kontaktformular"
+      name="submit-to-google-sheet"
+      style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+  
   <input type="text" name="name" placeholder="Name *" required>
   <input type="email" name="email" placeholder="E-Mail *" required>
   <input type="tel" name="phone" placeholder="Telefonnummer *" required>
   <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
   <input type="text" name="ort" placeholder="PLZ und Ort *" required>
   <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
+  
   <label style="font-size: 14px; color: #ccc;">
     <input type="checkbox" name="datenschutz" required>
     Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
   </label>
+  
   <button type="submit">Absenden</button>
 </form>
+
 
 
 
@@ -346,30 +353,5 @@
       });
     });
   </script>
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwy1OsV3vLuNCZjeXsY-2yM4CuHY345DKlo8Dr3u5zWzgIQ7GNNfh9KMkGV62bnyqEF/exec";
-  const form = document.forms["submit-to-google-sheet"];
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData
-    })
-    .then(() => {
-      alert("Nachricht erfolgreich gesendet!");
-      form.reset();
-    })
-    .catch((error) => {
-      alert("Fehler beim Senden. Bitte später erneut versuchen.");
-      console.error(error);
-    });
-  });
-</script>
-
-
-
    </body>
 </html>
