@@ -250,7 +250,7 @@
       <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: Urlaub</p>
     </div>
 
-<form id="kontaktformular"
+<form id="kontaktformular" name="submit-to-google-sheet"
   style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
 
 
@@ -352,23 +352,17 @@
     });
   </script>
 <script>
-  document.getElementById('kontaktformular').addEventListener('submit', function (e) {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbybATJ26NUEjkpNgr4OYaKMckwhMyxV2uxBLNZksQ3A_SqFR90-g81UGbejujLosHWA/exec";
+  const form = document.forms["submit-to-google-sheet"];
+
+  form.addEventListener("submit", e => {
     e.preventDefault();
-    const form = e.target;
 
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      adresse: form.adresse.value,
-      ort: form.ort.value,
-      message: form.message.value
-    };
+    const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycbybATJ26NUEjkpNgr4OYaKMckwhMyxV2uxBLNZksQ3A_SqFR90-g81UGbejujLosHWA/exec", {
+    fetch(scriptURL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      body: formData
     })
     .then(response => {
       alert("Nachricht erfolgreich gesendet!");
@@ -376,12 +370,11 @@
     })
     .catch(error => {
       alert("Fehler beim Senden. Bitte später erneut versuchen.");
-      console.error(error);
+      console.error("Fehler:", error);
     });
   });
 </script>
 
-  
 
-  </body>
+   </body>
 </html>
