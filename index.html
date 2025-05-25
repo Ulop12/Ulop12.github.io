@@ -351,8 +351,13 @@
       method: "POST",
       body: formData
     })
-    .then(() => {
-      window.location.href = "danke.html"; // ✅ Weiterleitung zur Danke-Seite
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === 'success') {
+        window.location.href = "danke.html"; // Weiterleitung nach Erfolg
+      } else {
+        alert("Fehler beim Senden. Bitte später erneut versuchen.");
+      }
     })
     .catch((error) => {
       alert("Fehler beim Senden. Bitte später erneut versuchen.");
@@ -360,6 +365,7 @@
     });
   });
 </script>
+
   <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
