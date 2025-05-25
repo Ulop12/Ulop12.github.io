@@ -3,17 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ✅ SEO-Grundoptimierung -->
-  <title>HK PestTech – Schädlingsbekämpfung in Vettweiß & Umgebung</title>
-  <meta name="description" content="HK PestTech bietet professionelle Schädlingsbekämpfung in Vettweiß und Umgebung. Effektiv gegen Ratten, Insekten und andere Schädlinge.">
-  <meta name="keywords" content="Schädlingsbekämpfung, Kammerjäger, Vettweiß, Ratten, Insekten, Ungeziefer, HK PestTech">
-  <meta name="author" content="Michael Hoffman">
-  <meta name="robots" content="index, follow">
-
+  <title>HK PestTech</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
     * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -186,64 +178,208 @@
       .social-icons { display: none; }
       section { padding: 40px 15px; }
     }
-    .glow-text {
-      color: #66b2ff;
-      text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
+
+      .glow-text {
+        color: #66b2ff;
+        text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
     }
-    .start-subline {
-      color: #66b2ff;
+      .start-subline {
+      color: #66b2ff; /* oder eine andere Farbe */
       font-size: 20px;
       margin-top: 10px;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    }
-  </style>
-</head>
-<body>
+}
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <i class="fas fa-map-marker-alt"></i> Michelsgraben 21, 52391 Vettweiß &nbsp;|&nbsp;
+      <i class="fas fa-phone-alt"></i> <a href="tel:+491736673401">+49 173 6673401</a> &nbsp;|&nbsp;
+      <i class="fas fa-envelope"></i> <a href="mailto:kontakt@hkpesttech.de">kontakt@hkpesttech.de</a>
+    </div>
 
-  <!-- Deine Website-Inhalte hier ... -->
+  <div class="navbar">
+    <div class="logo">H K PestTech</div>
+    <button class="burger" id="burger" aria-label="Menü öffnen">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#start">START</a>
+      <a href="#service">UNSER SERVICE</a>
+      <a href="#kontakt">KONTAKT</a>
+    </div>
+  </div>
 
-  <form id="kontaktformular">
-    <input type="text" name="name" placeholder="Name *" required>
-    <input type="email" name="email" placeholder="E-Mail *" required>
-    <input type="tel" name="phone" placeholder="Telefonnummer *" required>
-    <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
-    <input type="text" name="ort" placeholder="PLZ und Ort *" required>
-    <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
-    <button type="submit">Absenden</button>
-  </form>
+  <section id="start">
+    <div class="start-content">
+      <img class="start-logo" src="logo.png" alt="HK PestTech Logo">
+      <div class="start-text">
+        <h2 class="glow-text">Willkommen bei HK PestTech</h2>
+        <p class="start-subline">Ihre Experten für zuverlässige<br>Schädlingsbekämpfung</p>
+      </div>
+      <a class="scroll-btn" href="#service"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <section id="service">
+    <h1>UNSERE LEISTUNGEN</h1>
+    <hr>
+    <p style="text-align:center; max-width:600px; margin:auto; font-size: 20px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 10px rgba(102, 178, 255, 0.5);">
+      Als Experte für Schädlingsbekämpfung bieten wir Ihnen effektive Lösungen, um Ihr Zuhause oder Unternehmen von lästigen Schädlingen zu befreien.
+    </p>
+    <div class="service-box">
+      <h2>RATTENBEKÄMPFUNG</h2>
+      <p>Professionelle Schädlingsbekämpfung für Ihr Zuhause oder Unternehmen</p>
+    </div>
+    <div class="service-box">
+      <h2>BERATUNG</h2>
+      <p>Unser Rundumservice umfasst die Inspektion, Bekämpfung und Prävention von Schädlingsbefall, um langfristige Ergebnisse zu gewährleisten.</p>
+    </div>
+    <a class="scroll-btn" href="#kontakt"><i class="fas fa-chevron-down"></i></a>
+  </section>
+
+  <section id="kontakt">
+    <h1>KONTAKT</h1>
+    <hr>
+    <p style="text-align:center; margin-bottom: 20px; font-size: 18px; font-weight: 500; color: #66b2ff;">
+      Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.
+    </p>
+
+    <div style="margin-bottom: 40px; text-align: center;">
+      <p><strong>Adresse:</strong><br>Michelsgraben 21, 52391 Vettweiß</p>
+      <p><strong>Telefon:</strong><br><a href="tel:+491736673401" style="color: #66b2ff;">+49 173 6673401</a></p>
+      <p><strong>E-Mail:</strong><br><a href="mailto:hkpesttech@gmail.com" style="color: #66b2ff;">hkpesttech@gmail.com</a></p>
+      <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: Urlaub</p>
+    </div>
+
+<form id="kontaktformular"
+  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+
+  <!-- Formsubmit Optionen -->
+  <input type="hidden" name="_subject" value="Neue Nachricht von HK PestTech">
+  <input type="hidden" name="_template" value="box">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Felder im gewohnten Look -->
+  <input type="text" name="name" placeholder="Name *" required>
+  <input type="email" name="email" placeholder="E-Mail *" required>
+  <input type="tel" name="phone" placeholder="Telefonnummer *" required
+    pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)">
+  <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
+  <input type="text" name="ort" placeholder="PLZ und Ort *" required>
+  <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
+
+  <label style="font-size: 14px; color: #ccc;">
+    <input type="checkbox" name="datenschutz" required>
+    Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
+  </label>
+
+  <button type="submit">Absenden</button>
+</form>
+
+
+
+    <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
+  </section>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/hkpesttech/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+
+<footer style="text-align:center; padding:30px 20px; background:#111; color:#999; font-size:14px;">
+
+  <!-- Instagram Box -->
+  <div style="
+    display: inline-block;
+    background: #66b2ff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+  ">
+    <a href="https://www.instagram.com/hkpesttech/" target="_blank"
+       style="color: #000; font-size: 18px; text-decoration: none; font-weight: bold;">
+      <i class="fab fa-instagram" style="margin-right:8px;"></i> Folge uns auf Instagram
+    </a>
+  </div>
+
+  <br>
+
+  <!-- WhatsApp Button -->
+  <div style="margin-top: 15px;">
+    <a href="https://wa.me/491736673401?text=Hallo%20HK%20PestTech%2C%20ich%20habe%20eine%20Frage."
+       target="_blank"
+       style="
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         background: linear-gradient(135deg, #25D366, #1ebe5d);
+         color: #fff;
+         padding: 12px 20px;
+         border-radius: 8px;
+         text-decoration: none;
+         font-weight: 600;
+         box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+         transition: background 0.3s ease, transform 0.2s ease;
+       "
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"
+    >
+      <i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp Support
+    </a>
+  </div>
+
+  <br><br>
+
+  <!-- Rechtliches -->
+  &copy; 2025 HK PestTech – 
+  <a href="impressum.html" style="color:#66b2ff; text-decoration:none;">Impressum</a> |
+  <a href="https://ulop12.github.io/datenschutz.html" style="color:#66b2ff; text-decoration:none;">Datenschutz</a>
+
+</footer>
+
+
+
 
   <script>
-    document.getElementById('kontaktformular').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        adresse: form.adresse.value,
-        ort: form.ort.value,
-        message: form.message.value
-      };
-
-      fetch("https://script.google.com/macros/s/AKfycbx9Jx1h8g2-NgsBI5tk6UkmyCswdalo587KnX-kh39unqHBqIx3_4iAnpJ4ohf6my4N/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        if (response.ok) {
-          alert("Nachricht erfolgreich gesendet!");
-          form.reset();
-        } else {
-          throw new Error("Server-Fehler");
-        }
-      })
-      .catch(error => {
-        alert("Fehler beim Senden. Bitte später erneut versuchen.");
-        console.error(error);
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
       });
     });
-  </script>
 
+    document.getElementById('kontaktformular')?.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      await fetch("https://formsubmit.co/hkpesttech@gmail.com", {
+        method: "POST",
+        body: data
+      });
+      window.location.href = "https://ulop12.github.io/danke.html";
+    });
+  </script>
+  <script>
+  document.getElementById('kontaktformular').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    await fetch("https://formsubmit.co/hkpesttech@gmail.com", {
+      method: "POST",
+      body: data
+    });
+    window.location.href = "https://ulop12.github.io/danke.html";
+  });
+</script>
+
+  
 </body>
 </html>
