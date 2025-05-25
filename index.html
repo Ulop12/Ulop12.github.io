@@ -336,10 +336,28 @@
   <a href="https://ulop12.github.io/datenschutz.html" style="color:#66b2ff; text-decoration:none;">Datenschutz</a>
 
 </footer>
+    
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwy1OsV3vLuNCZjeXsY-2yM4CuHY345DKlo8Dr3u5zWzgIQ7GNNfh9KMkGV62bnyqEF/exec";
+  const form = document.forms["submit-to-google-sheet"];
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
 
-
-
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData
+    })
+    .then(() => {
+      window.location.href = "danke.html"; // ✅ Weiterleitung zur Danke-Seite
+    })
+    .catch((error) => {
+      alert("Fehler beim Senden. Bitte später erneut versuchen.");
+      console.error(error);
+    });
+  });
+</script>
   <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
