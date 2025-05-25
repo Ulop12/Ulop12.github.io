@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HK PestTech</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
 
@@ -40,12 +41,17 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
     .logo {
       font-weight: bold;
       font-size: 24px;
       letter-spacing: 2px;
       color: #ffffff;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
     }
     .nav-links a {
       margin-left: 30px;
@@ -58,7 +64,7 @@
       color: #66b2ff;
     }
     #start, #service, #kontakt {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,7 +76,6 @@
       color: #fff;
       position: relative;
     }
-    
     .start-content {
       position: relative;
       z-index: 1;
@@ -81,6 +86,7 @@
     .start-logo {
       width: 380px;
       margin-bottom: 30px;
+      max-width: 90%;
     }
     .start-text h2 {
       font-size: 48px;
@@ -107,13 +113,10 @@
       50% { transform: translateY(10px); }
     }
     .service-box, .kontakt-box {
-  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-}
-    .kontakt-grid div {
-      width: 45%;
+      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
     }
     hr {
       width: 250px;
@@ -141,26 +144,54 @@
       border-radius: 50%;
       text-decoration: none;
     }
-  .glow-text {
-  position: relative;
-  display: inline-block;
-  color: #66b2ff;
-  text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
-}
+    .glow-text {
+      position: relative;
+      display: inline-block;
+      color: #66b2ff;
+      text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
+    }
+    .glow-box {
+      position: relative;
+      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+    }
 
-.glow-box {
-  position: relative;
-  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
-}
-
-}
-
-</style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    /* 👇 Responsive Code */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .nav-links a {
+        margin: 10px 0;
+      }
+      .start-text h2 {
+        font-size: 32px;
+      }
+      .start-text p {
+        font-size: 18px;
+      }
+      section {
+        padding: 40px 15px;
+      }
+      .start-logo {
+        width: 100%;
+        max-width: 300px;
+      }
+      .social-icons {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="top-bar">HIER KOMMT DIE ADRESSE HIN NUTTÖÖÖÖ | TELEFONNR:</div>
@@ -219,7 +250,6 @@
       <input type="tel" name="phone" placeholder="Handynummer (freiwillig)" style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
       <input type="text" name="_honey" style="display:none">
       <input type="hidden" name="_captcha" value="false">
-      
       <button type="submit" style="padding: 12px; background: #66b2ff; color: #000; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Absenden</button>
     </form>
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
@@ -231,8 +261,9 @@
     <a href="#">▶</a>
     <a href="#">📷</a>
   </div>
-<footer style="text-align:center; padding: 30px; background: #111; color: #999; font-size: 14px;">
-  &copy; 2025 HK PestTech – <a href="impressum.html" style="color: #66b2ff; text-decoration: none;">Impressum</a> | <a href="datenschutz.html" style="color: #66b2ff; text-decoration: none;">Datenschutz</a>
-</footer>
+
+  <footer style="text-align:center; padding: 30px; background: #111; color: #999; font-size: 14px;">
+    &copy; 2025 HK PestTech – <a href="impressum.html" style="color: #66b2ff; text-decoration: none;">Impressum</a> | <a href="datenschutz.html" style="color: #66b2ff; text-decoration: none;">Datenschutz</a>
+  </footer>
 </body>
 </html>
