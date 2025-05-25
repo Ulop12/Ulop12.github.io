@@ -74,31 +74,23 @@
       flex-direction: column;
       text-align: center;
     }
-    #start {
-      background: linear-gradient(145deg, #1a1a1a, #252525);
-      color: #fff;
-      position: relative;
-    }
     .start-content {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .start-logo {
-      width: 380px;
+      width: 300px;
       margin-bottom: 30px;
-      max-width: 90%;
     }
     .start-text h2 {
       font-size: 48px;
       font-weight: 600;
       margin: 0;
-      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     }
     .start-text p {
       font-size: 22px;
       margin-top: 20px;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     }
     .scroll-btn {
       font-size: 28px;
@@ -145,10 +137,6 @@
       border-radius: 50%;
       text-decoration: none;
     }
-    .glow-text {
-      color: #66b2ff;
-      text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
-    }
     @media (max-width: 768px) {
       .nav-links {
         overflow: hidden;
@@ -173,14 +161,6 @@
         padding: 10px 20px;
         margin: 0;
       }
-      .start-text h2 { font-size: 32px; }
-      .start-text p { font-size: 18px; }
-      .start-logo {
-        width: 100%;
-        max-width: 300px;
-      }
-      .social-icons { display: none; }
-      section { padding: 40px 15px; }
     }
   </style>
 </head>
@@ -195,9 +175,9 @@
     <div class="logo">H K PestTech</div>
     <button class="burger" id="burger" aria-label="Menü öffnen">&#9776;</button>
     <div class="nav-links" id="navLinks">
-      <a href="#start">START</a>
-      <a href="#service">UNSER SERVICE</a>
-      <a href="#kontakt">KONTAKT</a>
+      <a href="#start">Start</a>
+      <a href="#service">Service</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
   </div>
 
@@ -206,7 +186,7 @@
       <img class="start-logo" src="logo.png" alt="HK PestTech Logo">
       <div class="start-text">
         <h2 class="glow-text">Willkommen bei HK PestTech</h2>
-        <p>Ihre Experten für zuverlässige<br>Schädlingsbekämpfung</p>
+        <p>Ihre Experten für zuverlässige Schädlingsbekämpfung</p>
       </div>
       <a class="scroll-btn" href="#service"><i class="fas fa-chevron-down"></i></a>
     </div>
@@ -215,16 +195,13 @@
   <section id="service">
     <h1>UNSERE LEISTUNGEN</h1>
     <hr>
-    <p style="text-align:center; max-width:600px; margin:auto; font-size: 20px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 10px rgba(102, 178, 255, 0.5);">
-      Als Experte für Schädlingsbekämpfung bieten wir Ihnen effektive Lösungen, um Ihr Zuhause oder Unternehmen von lästigen Schädlingen zu befreien.
-    </p>
     <div class="service-box">
       <h2>RATTENBEKÄMPFUNG</h2>
-      <p>Professionelle Schädlingsbekämpfung für Ihr Zuhause oder Unternehmen</p>
+      <p>Effektive und sichere Bekämpfung von Rattenbefall.</p>
     </div>
     <div class="service-box">
       <h2>BERATUNG</h2>
-      <p>Unser Rundumservice umfasst die Inspektion, Bekämpfung und Prävention von Schädlingsbefall, um langfristige Ergebnisse zu gewährleisten.</p>
+      <p>Wir beraten Sie individuell zur Schädlingsprävention.</p>
     </div>
     <a class="scroll-btn" href="#kontakt"><i class="fas fa-chevron-down"></i></a>
   </section>
@@ -236,45 +213,34 @@
       Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.
     </p>
 
-    <!-- ✅ Formular mit JavaScript-Weiterleitung -->
-    <form id="kontaktformular"
-      style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+    <div style="margin-bottom: 40px; text-align: center;">
+      <p><strong>Adresse:</strong><br>Musterstraße 12, 12345 Teststadt</p>
+      <p><strong>Telefon:</strong><br><a href="tel:01234567890" style="color: #66b2ff;">0123 / 4567890</a></p>
+      <p><strong>E-Mail:</strong><br><a href="mailto:hkpesttech@gmail.com" style="color: #66b2ff;">hkpesttech@gmail.com</a></p>
+      <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: 8–18 Uhr</p>
+    </div>
 
+    <form id="kontaktformular" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none">
 
-      <input type="text" name="name" placeholder="Name *" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
-      <input type="email" name="email" placeholder="E-Mail *" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
-      <input type="tel" name="phone" placeholder="Telefonnummer *" required pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)" style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
-      <textarea name="message" placeholder="Nachricht *" rows="5" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;"></textarea>
+      <input type="text" name="name" placeholder="Name *" required>
+      <input type="email" name="email" placeholder="E-Mail *" required>
+      <input type="tel" name="phone" placeholder="Telefonnummer *" required pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)">
+      <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
+      <input type="text" name="ort" placeholder="PLZ und Ort *" required>
+      <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
 
-      <label style="font-size: 14px; color: #ccc;">
+      <label>
         <input type="checkbox" name="datenschutz" required>
         Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
       </label>
 
-      <button type="submit" style="padding:12px; background:#66b2ff; color:#000; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
-        Absenden
-      </button>
+      <button type="submit">Absenden</button>
     </form>
-
-    <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
   </section>
 
-  <div class="social-icons">
-    <a href="#">f</a>
-    <a href="#">G+</a>
-    <a href="#">▶</a>
-    <a href="#">📷</a>
-  </div>
-
-  <footer style="text-align:center; padding:30px; background:#111; color:#999; font-size:14px;">
-    &copy; 2025 HK PestTech – <a href="impressum.html" style="color:#66b2ff; text-decoration:none;">Impressum</a> |
-    <a href="https://ulop12.github.io/datenschutz.html" style="color:#66b2ff; text-decoration:none;">Datenschutz</a>
-  </footer>
-
   <script>
-    // Burger-Menü
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
     burger.addEventListener('click', () => {
@@ -287,8 +253,7 @@
       });
     });
 
-    // JavaScript-Formsubmit mit Weiterleitung
-    document.getElementById('kontaktformular').addEventListener('submit', async function (e) {
+    document.getElementById('kontaktformular')?.addEventListener('submit', async function (e) {
       e.preventDefault();
       const form = e.target;
       const data = new FormData(form);
