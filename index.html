@@ -250,26 +250,52 @@
       <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: Urlaub</p>
     </div>
 
-    <form id="kontaktformular" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" style="display:none">
+<form id="kontaktformular"
+  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
 
-      <input type="text" name="name" placeholder="Name *" required>
-      <input type="email" name="email" placeholder="E-Mail *" required>
-      <input type="tel" name="phone" placeholder="Telefonnummer *" required pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)">
-      <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
-      <input type="text" name="ort" placeholder="PLZ und Ort *" required>
-      <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
+  <!-- SPAM-Schutz -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
 
-      <label style="font-size: 14px; color: #ccc;">
-        <input type="checkbox" name="datenschutz" required>
-        Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
-      </label>
+  <!-- Email-Konfiguration -->
+  <input type="hidden" name="_subject" value="Neue Nachricht von HK PestTech Kontaktformular">
+  <input type="hidden" name="_template" value="box">
 
-      <button type="submit" style="padding:12px; background:#66b2ff; color:#000; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
-        Absenden
-      </button>
-    </form>
+  <!-- Name -->
+  <label for="name">Name *</label>
+  <input id="name" type="text" name="name" required>
+
+  <!-- E-Mail -->
+  <label for="email">E-Mail *</label>
+  <input id="email" type="email" name="email" required>
+
+  <!-- Telefonnummer -->
+  <label for="phone">Telefonnummer *</label>
+  <input id="phone" type="tel" name="phone" required
+    pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)">
+
+  <!-- Adresse -->
+  <label for="adresse">Adresse *</label>
+  <input id="adresse" type="text" name="adresse" required>
+
+  <!-- Ort -->
+  <label for="ort">PLZ und Ort *</label>
+  <input id="ort" type="text" name="ort" required>
+
+  <!-- Nachricht -->
+  <label for="message">Nachricht *</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <!-- DSGVO -->
+  <label style="font-size: 14px; color: #ccc;">
+    <input type="checkbox" name="datenschutz" required>
+    Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
+  </label>
+
+  <!-- Absenden -->
+  <button type="submit">Absenden</button>
+</form>
+
 
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
   </section>
@@ -310,5 +336,19 @@
       window.location.href = "https://ulop12.github.io/danke.html";
     });
   </script>
+  <script>
+  document.getElementById('kontaktformular').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    await fetch("https://formsubmit.co/hkpesttech@gmail.com", {
+      method: "POST",
+      body: data
+    });
+    window.location.href = "https://ulop12.github.io/danke.html";
+  });
+</script>
+
+  
 </body>
 </html>
