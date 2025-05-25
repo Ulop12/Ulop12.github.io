@@ -27,9 +27,17 @@
     .top-bar {
       background: #000;
       color: #fff;
-      font-size: 12px;
+      font-size: 13px;
       text-align: center;
-      padding: 5px 0;
+      padding: 6px 10px;
+    }
+    .top-bar a {
+      color: #66b2ff;
+      text-decoration: none;
+    }
+    .top-bar i {
+      margin-right: 5px;
+      color: #66b2ff;
     }
 
     .navbar {
@@ -180,7 +188,7 @@
       box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
     }
 
-    /* --- Responsive + animiertes Burger-Menü --- */
+    /* Responsive Burger-Menü */
     @media (max-width: 768px) {
       .nav-links {
         overflow: hidden;
@@ -236,8 +244,14 @@
   </style>
 </head>
 <body>
-  <div class="top-bar">HIER KOMMT DIE ADRESSE HIN NUTTÖÖÖÖ | TELEFONNR:</div>
+  <!-- ✅ Neue Top-Bar -->
+  <div class="top-bar">
+    <i class="fas fa-map-marker-alt"></i> Musterstraße 12, 12345 Teststadt &nbsp;|&nbsp;
+    <i class="fas fa-phone-alt"></i> <a href="tel:01234567890">0123 / 4567890</a> &nbsp;|&nbsp;
+    <i class="fas fa-envelope"></i> <a href="mailto:kontakt@hkpesttech.de">kontakt@hkpesttech.de</a>
+  </div>
 
+  <!-- ✅ Navbar + Burger-Menü -->
   <div class="navbar">
     <div class="logo">H K PestTech</div>
     <button class="burger" id="burger" aria-label="Menü öffnen">&#9776;</button>
@@ -248,6 +262,7 @@
     </div>
   </div>
 
+  <!-- Startseite -->
   <section id="start">
     <div class="start-content">
       <img class="start-logo" src="logo.png" alt="HK PestTech Logo">
@@ -259,6 +274,7 @@
     </div>
   </section>
 
+  <!-- Leistungen -->
   <section id="service">
     <h1>UNSERE LEISTUNGEN</h1>
     <hr>
@@ -276,15 +292,16 @@
     <a class="scroll-btn" href="#kontakt"><i class="fas fa-chevron-down"></i></a>
   </section>
 
+  <!-- Kontakt -->
   <section id="kontakt">
     <h1>KONTAKT</h1>
     <hr>
     <p style="text-align:center; margin-bottom: 20px; font-size: 18px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 8px rgba(102, 178, 255, 0.4);">Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.</p>
     <div style="margin-bottom: 40px; text-align: center;">
-      <p><strong>Adresse:</strong><br> teststraße 1, 1 teststadt</p>
-      <p><strong>Telefon:</strong><br> Ruf noch nicht an danke :*</p>
-      <p><strong>E-Mail:</strong><br> pesttech@funktioniert noch nicht.de</p>
-      <p><strong>Öffnungszeiten:</strong><br> Mo–Fr: Urlaub</p>
+      <p><strong>Adresse:</strong><br> Musterstraße 12, 12345 Teststadt</p>
+      <p><strong>Telefon:</strong><br> 0123 / 4567890</p>
+      <p><strong>E-Mail:</strong><br> kontakt@hkpesttech.de</p>
+      <p><strong>Öffnungszeiten:</strong><br> Mo–Fr: 8–18 Uhr</p>
     </div>
     <form action="https://formsubmit.co/example@email.com" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
       <input type="hidden" name="_next" value="https://example.com/danke.html">
@@ -299,6 +316,7 @@
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
   </section>
 
+  <!-- Social Icons -->
   <div class="social-icons">
     <a href="#">f</a>
     <a href="#">G+</a>
@@ -306,10 +324,12 @@
     <a href="#">📷</a>
   </div>
 
+  <!-- Footer -->
   <footer style="text-align:center; padding: 30px; background: #111; color: #999; font-size: 14px;">
     &copy; 2025 HK PestTech – <a href="impressum.html" style="color: #66b2ff; text-decoration: none;">Impressum</a> | <a href="datenschutz.html" style="color: #66b2ff; text-decoration: none;">Datenschutz</a>
   </footer>
 
+  <!-- JavaScript für Burger-Menü -->
   <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
