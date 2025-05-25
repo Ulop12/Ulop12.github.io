@@ -303,16 +303,44 @@
       <p><strong>E-Mail:</strong><br> hkpesttech@gmail.com</p>
       <p><strong>Öffnungszeiten:</strong><br> Mo–Fr: Urlaub</p>
     </div>
-    <form action="https://formsubmit.co/hkpesttech@gmail.com" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-      <input type="hidden" name="_next" value="https://ulop12.github.io/danke.html">
-      <input type="text" name="name" placeholder="Name" required style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-      <input type="email" name="email" placeholder="E-Mail" required style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-      <textarea name="message" placeholder="Nachricht" rows="5" required style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;"></textarea>
-      <input type="tel" name="phone" placeholder="Telefonnummer" required style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit" style="padding: 12px; background: #66b2ff; color: #000; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Absenden</button>
-    </form>
+<form action="https://formsubmit.co/hkpesttech@gmail.com" method="POST"
+  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+
+  <!-- Weiterleitung nach dem Absenden -->
+  <input type="hidden" name="_next" value="https://www.ulop12.github.io/danke.html">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Name -->
+  <input type="text" name="name" placeholder="Name *" required
+    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
+
+  <!-- E-Mail -->
+  <input type="email" name="email" placeholder="E-Mail *" required
+    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
+
+  <!-- Telefon (Pflichtfeld mit Pattern) -->
+  <input type="tel" name="phone" placeholder="Telefonnummer *" required
+    pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)"
+    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
+
+  <!-- Nachricht -->
+  <textarea name="message" placeholder="Nachricht *" rows="5" required
+    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;"></textarea>
+
+  <!-- DSGVO Checkbox -->
+  <label style="font-size: 14px; color: #ccc;">
+    <input type="checkbox" name="datenschutz" required>
+    Ich akzeptiere die <a href="https://www.ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
+  </label>
+
+  <!-- Absenden -->
+  <button type="submit"
+    style="padding: 12px; background: #66b2ff; color: #000; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+    Absenden
+  </button>
+</form>
+
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
   </section>
 
