@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
-
     * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
       margin: 0;
@@ -21,9 +20,7 @@
       max-width: 1000px;
       margin: auto;
     }
-    h1, h2 {
-      text-align: center;
-    }
+    h1, h2 { text-align: center; }
     .top-bar {
       background: #000;
       color: #fff;
@@ -31,15 +28,8 @@
       text-align: center;
       padding: 6px 10px;
     }
-    .top-bar a {
-      color: #66b2ff;
-      text-decoration: none;
-    }
-    .top-bar i {
-      margin-right: 5px;
-      color: #66b2ff;
-    }
-
+    .top-bar a { color: #66b2ff; text-decoration: none; }
+    .top-bar i { margin-right: 5px; color: #66b2ff; }
     .navbar {
       background: #111;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -51,30 +41,23 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo {
       font-weight: bold;
       font-size: 24px;
       letter-spacing: 2px;
       color: #ffffff;
     }
-
     .nav-links {
       display: flex;
       gap: 30px;
     }
-
     .nav-links a {
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
       transition: color 0.3s;
     }
-
-    .nav-links a:hover {
-      color: #66b2ff;
-    }
-
+    .nav-links a:hover { color: #66b2ff; }
     .burger {
       display: none;
       background: none;
@@ -83,7 +66,6 @@
       color: #fff;
       cursor: pointer;
     }
-
     #start, #service, #kontakt {
       min-height: 100vh;
       display: flex;
@@ -92,38 +74,32 @@
       flex-direction: column;
       text-align: center;
     }
-
     #start {
       background: linear-gradient(145deg, #1a1a1a, #252525);
       color: #fff;
       position: relative;
     }
-
     .start-content {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
     .start-logo {
       width: 380px;
       margin-bottom: 30px;
       max-width: 90%;
     }
-
     .start-text h2 {
       font-size: 48px;
       font-weight: 600;
       margin: 0;
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     }
-
     .start-text p {
       font-size: 22px;
       margin-top: 20px;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     }
-
     .scroll-btn {
       font-size: 28px;
       background: none;
@@ -133,19 +109,16 @@
       color: #66b2ff;
       margin-top: 40px;
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(10px); }
     }
-
-    .service-box, .kontakt-box {
+    .service-box {
       background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
       border-radius: 10px;
       padding: 20px;
       margin: 20px 0;
     }
-
     hr {
       width: 250px;
       height: 10px;
@@ -153,7 +126,6 @@
       border: none;
       margin: 20px auto;
     }
-
     .social-icons {
       position: fixed;
       top: 50%;
@@ -163,7 +135,6 @@
       flex-direction: column;
       gap: 20px;
     }
-
     .social-icons a {
       width: 30px;
       height: 30px;
@@ -174,20 +145,10 @@
       border-radius: 50%;
       text-decoration: none;
     }
-
     .glow-text {
       color: #66b2ff;
       text-shadow: 0 0 5px #66b2ff, 0 0 10px #66b2ff, 0 0 20px #66b2ff;
     }
-
-    .glow-box {
-      background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
-    }
-
     @media (max-width: 768px) {
       .nav-links {
         overflow: hidden;
@@ -198,47 +159,28 @@
         padding: 0;
         transition: max-height 0.4s ease, padding 0.3s ease;
       }
-
       .nav-links.active {
         max-height: 300px;
         padding: 10px 0;
       }
-
-      .burger {
-        display: block;
-      }
-
+      .burger { display: block; }
       .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px 20px;
       }
-
       .nav-links a {
         padding: 10px 20px;
         margin: 0;
       }
-
-      .start-text h2 {
-        font-size: 32px;
-      }
-
-      .start-text p {
-        font-size: 18px;
-      }
-
+      .start-text h2 { font-size: 32px; }
+      .start-text p { font-size: 18px; }
       .start-logo {
         width: 100%;
         max-width: 300px;
       }
-
-      .social-icons {
-        display: none;
-      }
-
-      section {
-        padding: 40px 15px;
-      }
+      .social-icons { display: none; }
+      section { padding: 40px 15px; }
     }
   </style>
 </head>
@@ -273,13 +215,13 @@
   <section id="service">
     <h1>UNSERE LEISTUNGEN</h1>
     <hr>
-    <p style="text-align:center; max-width:600px; margin:auto; font-size: 20px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 10px rgba(102, 178, 255, 0.5);">Als Experte für Schädlingsbekämpfung bieten wir Ihnen effektive Lösungen, um Ihr Zuhause oder Unternehmen von lästigen Schädlingen zu befreien.</p>
-
-    <div class="service-box glow-box">
+    <p style="text-align:center; max-width:600px; margin:auto; font-size: 20px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 10px rgba(102, 178, 255, 0.5);">
+      Als Experte für Schädlingsbekämpfung bieten wir Ihnen effektive Lösungen, um Ihr Zuhause oder Unternehmen von lästigen Schädlingen zu befreien.
+    </p>
+    <div class="service-box">
       <h2>RATTENBEKÄMPFUNG</h2>
       <p>Professionelle Schädlingsbekämpfung für Ihr Zuhause oder Unternehmen</p>
     </div>
-
     <div class="service-box">
       <h2>BERATUNG</h2>
       <p>Unser Rundumservice umfasst die Inspektion, Bekämpfung und Prävention von Schädlingsbefall, um langfristige Ergebnisse zu gewährleisten.</p>
@@ -290,48 +232,31 @@
   <section id="kontakt">
     <h1>KONTAKT</h1>
     <hr>
-    <p style="text-align:center; margin-bottom: 20px; font-size: 18px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 8px rgba(102, 178, 255, 0.4);">Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.</p>
+    <p style="text-align:center; margin-bottom: 20px; font-size: 18px; font-weight: 500; color: #66b2ff;">
+      Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.
+    </p>
 
-    <!-- ✅ NEUES FORMULAR -->
-    <!-- Innerhalb des <form> ... > -->
-<form action="https://formsubmit.co/hkpesttech@gmail.com" method="POST"
-  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;"
-  onsubmit="redirectAfterSubmit()">
+    <!-- ✅ Formular mit JavaScript-Weiterleitung -->
+    <form id="kontaktformular"
+      style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
 
-  <input type="text" name="name" placeholder="Name *" required
-    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-  <input type="email" name="email" placeholder="E-Mail *" required
-    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-  <input type="tel" name="phone" placeholder="Telefonnummer *" required
-    pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)"
-    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;">
-  <textarea name="message" placeholder="Nachricht *" rows="5" required
-    style="padding: 10px; border: none; border-radius: 5px; background: #333; color: #fff;"></textarea>
+      <input type="text" name="name" placeholder="Name *" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
+      <input type="email" name="email" placeholder="E-Mail *" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
+      <input type="tel" name="phone" placeholder="Telefonnummer *" required pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)" style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;">
+      <textarea name="message" placeholder="Nachricht *" rows="5" required style="padding:10px; border:none; border-radius:5px; background:#333; color:#fff;"></textarea>
 
-  <label style="font-size: 14px; color: #ccc;">
-    <input type="checkbox" name="datenschutz" required>
-    Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
-  </label>
+      <label style="font-size: 14px; color: #ccc;">
+        <input type="checkbox" name="datenschutz" required>
+        Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
+      </label>
 
-  <button type="submit"
-    style="padding: 12px; background: #66b2ff; color: #000; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
-    Absenden
-  </button>
-</form>
-
-<!-- JavaScript-Fallback für sichere Weiterleitung -->
-<script>
-  function redirectAfterSubmit() {
-    setTimeout(() => {
-      window.location.href = "https://ulop12.github.io/danke.html";
-    }, 1000); // wartet 1 Sekunde, um Formsubmit die Zeit zum Absenden zu geben
-  }
-</script>
-
-
+      <button type="submit" style="padding:12px; background:#66b2ff; color:#000; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+        Absenden
+      </button>
+    </form>
 
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
   </section>
@@ -343,23 +268,35 @@
     <a href="#">📷</a>
   </div>
 
-  <footer style="text-align:center; padding: 30px; background: #111; color: #999; font-size: 14px;">
-    &copy; 2025 HK PestTech – <a href="impressum.html" style="color: #66b2ff; text-decoration: none;">Impressum</a> | <a href="datenschutz.html" style="color: #66b2ff; text-decoration: none;">Datenschutz</a>
+  <footer style="text-align:center; padding:30px; background:#111; color:#999; font-size:14px;">
+    &copy; 2025 HK PestTech – <a href="impressum.html" style="color:#66b2ff; text-decoration:none;">Impressum</a> |
+    <a href="https://ulop12.github.io/datenschutz.html" style="color:#66b2ff; text-decoration:none;">Datenschutz</a>
   </footer>
 
   <script>
+    // Burger-Menü
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
-
     burger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-
     const links = navLinks.querySelectorAll('a');
     links.forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
+    });
+
+    // JavaScript-Formsubmit mit Weiterleitung
+    document.getElementById('kontaktformular').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      await fetch("https://formsubmit.co/hkpesttech@gmail.com", {
+        method: "POST",
+        body: data
+      });
+      window.location.href = "https://ulop12.github.io/danke.html";
     });
   </script>
 </body>
