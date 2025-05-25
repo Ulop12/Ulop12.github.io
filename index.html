@@ -293,10 +293,11 @@
     <p style="text-align:center; margin-bottom: 20px; font-size: 18px; font-weight: 500; color: #66b2ff; text-shadow: 0 0 8px rgba(102, 178, 255, 0.4);">Nutzen Sie gern die folgenden Kontaktdaten oder das Formular unten für Ihre Anfrage.</p>
 
     <!-- ✅ NEUES FORMULAR -->
-    <form action="https://formsubmit.co/hkpesttech@gmail.com" method="POST"
-  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+    <!-- Innerhalb des <form> ... > -->
+<form action="https://formsubmit.co/hkpesttech@gmail.com" method="POST"
+  style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;"
+  onsubmit="redirectAfterSubmit()">
 
-  <input type="hidden" name="_next" value="https://ulop12.github.io/danke.html">
   <input type="hidden" name="_captcha" value="false">
   <input type="text" name="_honey" style="display:none">
 
@@ -320,6 +321,16 @@
     Absenden
   </button>
 </form>
+
+<!-- JavaScript-Fallback für sichere Weiterleitung -->
+<script>
+  function redirectAfterSubmit() {
+    setTimeout(() => {
+      window.location.href = "https://ulop12.github.io/danke.html";
+    }, 1000); // wartet 1 Sekunde, um Formsubmit die Zeit zum Absenden zu geben
+  }
+</script>
+
 
 
     <a class="scroll-btn" href="#start"><i class="fas fa-chevron-up"></i></a>
