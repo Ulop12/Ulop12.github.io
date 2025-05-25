@@ -260,17 +260,9 @@
 <form id="kontaktformular"
   style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
 
-  <!-- Formsubmit Optionen -->
-  <input type="hidden" name="_subject" value="Neue Nachricht von HK PestTech">
-  <input type="hidden" name="_template" value="box">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" style="display:none">
-
-  <!-- Felder im gewohnten Look -->
   <input type="text" name="name" placeholder="Name *" required>
   <input type="email" name="email" placeholder="E-Mail *" required>
-  <input type="tel" name="phone" placeholder="Telefonnummer *" required
-    pattern="[\d+ ]{6,}" title="Bitte eine gültige Telefonnummer eingeben (mind. 6 Ziffern)">
+  <input type="tel" name="phone" placeholder="Telefonnummer *" required>
   <input type="text" name="adresse" placeholder="Ihre Adresse *" required>
   <input type="text" name="ort" placeholder="PLZ und Ort *" required>
   <textarea name="message" placeholder="Nachricht *" rows="5" required></textarea>
@@ -280,8 +272,42 @@
     Ich akzeptiere die <a href="https://ulop12.github.io/datenschutz.html" target="_blank" style="color: #66b2ff;">Datenschutzerklärung</a> *
   </label>
 
-  <button type="submit">Absenden</button>
+  <button type="submit" style="padding:12px; background:#66b2ff; color:#000; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+    Absenden
+  </button>
 </form>
+
+<script>
+  document.getElementById('kontaktformular').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      adresse: form.adresse.value,
+      ort: form.ort.value,
+      message: form.message.value
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycby3Z9hCh7CWBTi6ES9OD63Y0TVWQNodwrG6Rv6i3hsim2bpVxur_d83F0NMGXiDhBMz/exec', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      alert('Nachricht erfolgreich gesendet!');
+      form.reset();
+    })
+    .catch(error => {
+      alert('Fehler beim Senden. Bitte später erneut versuchen.');
+      console.error('Formularfehler:', error);
+    });
+  });
+</script>
+
 
 
 
