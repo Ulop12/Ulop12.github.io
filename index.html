@@ -280,7 +280,11 @@
   
   <button type="submit">Absenden</button>
 </form>
-
+<!-- Ladeindikator direkt unter dem Formular -->
+    <div id="loader" style="display:none; text-align:center; margin:30px auto 0 auto;">
+  <i class="fas fa-spinner fa-spin" style="font-size:2.5rem; color:#66b2ff;"></i>
+  <div style="color:#66b2ff; margin-top:8px;">Wird gesendet…</div>
+</div>
 
 
 
@@ -352,9 +356,12 @@
 <script>
   const scriptURL = "https://script.google.com/macros/s/AKfycbxOmt07LJZBzl3M0wGX5aUxnFz3fgSVkRifeozJlw_zhE52dULzXla6Vp5yt6IlYUHG/exec";
   const form = document.forms["submit-to-google-sheet"];
+  const loader = document.getElementById("loader");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    loader.style.display = "block";         // Ladeindikator anzeigen
+    form.querySelector("button[type=submit]").disabled = true; // Button deaktivieren
     const formData = new FormData(form);
 
     fetch(scriptURL, {
@@ -363,18 +370,23 @@
     })
     .then((response) => response.json())
     .then((data) => {
+      loader.style.display = "none";         // Ladeindikator ausblenden
+      form.querySelector("button[type=submit]").disabled = false; // Button aktivieren
       if (data.status === 'success') {
-        window.location.href = "danke.html"; // Weiterleitung nach Erfolg
+        window.location.href = "danke.html";
       } else {
         alert("Fehler beim Senden. Bitte später erneut versuchen.");
       }
     })
     .catch((error) => {
+      loader.style.display = "none";
+      form.querySelector("button[type=submit]").disabled = false;
       alert("Fehler beim Senden. Bitte später erneut versuchen.");
       console.error(error);
     });
   });
 </script>
+
 
   <script>
     const burger = document.getElementById('burger');
